@@ -8,8 +8,8 @@ https://www.notion.so/5c112921c15e41c98620f58a8f75484e#4b83708ca53a42548ee3de7da
 콘텐츠를 다루는 스타트업에서 개발 혹은 PM으로 활동하길 원해요!
 
 ## 나를 소개 짤들
-![강아지보다는 고양이파](https://www.notion.so/5c112921c15e41c98620f58a8f75484e#4b83708ca53a42548ee3de7da59d1ede)
-![MBTI는 INTP](https://www.notion.so/5c112921c15e41c98620f58a8f75484e#97a139b7f74b42f39c46642055c28454)
+![강아지보다는 고양이파](./catimage.jpg)
+![MBTI는 INTP](./MBTI.jpg)
 
 # 목표 기술 스택
 * C 
