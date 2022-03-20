@@ -1,0 +1,231 @@
+p{
+    font-weight: 700;
+}
+
+
+.entire{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: solid black 3px;
+}
+
+/* 첫번째 줄 */
+
+.header{
+    display: flex;
+    border-bottom: solid rgba(0,0,0,0.3) 1px;
+    justify-content: space-between;
+}
+
+.namelogo{
+    display: flex;
+    align-items: center;
+}
+
+.namelogo h1 {
+    padding-left: 5px;
+}
+
+.logo {
+    width:40px;
+    height:40px;
+}
+
+.topside{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.topside .logo{
+    margin: 3px 20px;
+}
+
+.downarrow{
+    margin:3px 5px;
+    width:20px;
+    height: 20px;
+}
+
+.namelogo h1{
+    margin-right: 5px;
+}
+
+/* 두번쩨 줄 */
+
+.secondpar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+.profile{
+    width: 120px;
+    height: 120px;
+    border-radius: 70%;
+
+}
+
+.status{
+    display: flex;
+    justify-content: space-around;
+}
+
+.post,.follower,.following {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 0px;
+    justify-content: center;
+
+}
+
+.post h2,.following h2, .follower h2{
+    text-align: center;
+    margin: 0px;
+}
+
+/* 세번째 줄 */
+.thirdpar {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+
+.thirdpar p {
+    margin: 0px;
+}
+
+/* 네번째 줄 */
+
+.fourthpar {
+    display: flex;
+    margin: 3px 0px;
+    align-items: center;
+    
+}
+
+.profilebutton {
+    width: 540px;
+    border: solid rgba(0,0,0,0.5) 1px;
+    text-align: center;
+    margin-left: 5px ;
+    height: 40px;
+    padding-bottom: 10px;
+    border-radius: 3%;
+}
+
+.fourthpar img {
+    border: solid rgba(0,0,0,0.5) 1px;
+    width: 40px;
+    height: 40px;
+    padding: 5px 5px;
+}
+
+/* 다섯번째 줄 */
+.fifthpar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list h2,.list p{
+    margin: 3px 3px;
+}
+
+.uparrow{
+    width:20px;
+    height: 20px;
+    margin: 10px 10px;
+}
+
+/* 여섯번째 줄 */
+
+.sixthpar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.story div{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 70%;
+    width: 90px;
+    height: 90px;
+}
+
+.story img {
+    border-radius: 70%;
+    border: solid black 1px;
+    width: 89px;
+    height: 89px;
+}
+
+.story p {
+    margin: 3px 0px;
+}
+
+/* 일곱번째 줄 */
+
+.seventhpar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.seventhpar .logo{
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px 5px;
+}
+
+/* 여덜번째 줄 */
+
+.eightpar{
+    display: flex;
+}
+
+.squareimg{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 2px 2px;
+}
+
+.squareimg .hor{
+    height: 100%;
+}
+
+.squareimg .vert{
+    width: 100%;
+}
+
+/* 아홉번째 줄 */
+
+.ninepar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.round {
+    border-radius: 70%;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px;
+}
