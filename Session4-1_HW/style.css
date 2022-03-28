@@ -1,0 +1,225 @@
+.entire {
+    display: flex;
+    border: 1px solid black;
+    width: 600px;
+    height: 800px;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+.fix{
+    position: fixed;
+    width: 600px;
+    z-index: 60;
+}
+
+/* 첫번쩨 줄 */
+.header {
+    display: flex;
+    position: relative;
+    width: 600px;
+    background-color: white;
+}
+
+.app_name{
+    color: red;
+}
+
+/* 두번째 줄 */
+.school {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: white;
+
+}
+
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button img{
+    width: 40px;
+    height: 40px;
+    margin: 0px 15px;
+}
+
+/* 세번째 줄 */
+
+
+.container{
+    display: flex;
+    position: relative;
+    top:150px;
+    width: 1000px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+
+.thirdpar {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 500px;
+    border-radius: 10%;
+    margin: 10px 10px;
+}
+
+.alarm{
+    display: flex;
+    align-items: center;
+}
+
+.alarm img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.par{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+}
+.par h1{
+    margin-bottom: 0px;
+    font-size: 25px;
+
+}
+
+.par p {
+    color:orange;
+    margin: 5px 0px;
+}
+
+.specific{
+    display: flex;
+    align-items: center;
+
+}
+
+.back{
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(1,1,1,0.2);
+    border-radius: 40%;
+    padding: 0px 0px;
+}
+.specific img {
+    width: 20px;
+    height: 20px
+}
+
+/* 네번째 줄 */
+
+.fourthpar{
+    display: flex;
+    position: absolute;
+    width:600px;
+    top: 400px;
+    justify-content: space-around;
+    margin-top: 10px;
+
+}
+
+.gray_button{
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.gray_button img{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(1,1,1,0.2);
+    padding: 15px;
+    border-radius: 60%;
+}
+
+/* 다섯번째 줄 */
+
+.fifthpar{
+    background-color: aquamarine;
+    border-radius: 10%;
+    position: absolute;
+    top:550px;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+}
+
+/* 여섯번째 줄 */
+
+.sixthpar{
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    position: absolute;
+    top:670px;
+    border: 1px black solid;
+    border-radius: 5%;
+    margin: 0px 5px;
+
+}
+
+.post_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_button{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.post_button img {
+    width: 20px;
+    height: 20px;
+}
+
+.post_button p {
+    color: red;
+}
+
+.post_line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.post_line img{
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+}
+
+.line{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.line h1{
+    font-size: 20px;
+    margin: 0px 10px;
+}
+
