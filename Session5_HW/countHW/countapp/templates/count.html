@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+</head>
+<body>
+    
+    <div class = "container">
+        <h1>글자수세기/단어수세기</h1>
+        <form action="{% url 'result' %}" method="post">{% csrf_token %}
+            <textarea name="text" cols="60" rows="20">내용을 입력해주세요</textarea>
+            <br />
+            <input type="submit" value="글자수 세기" />  
+        </form>
+    </div>
+    <div class = "container2">
+        <div class = "text">
+            <h4>전문: </h4>
+        </div>
+        <div class = "result">
+            <div class = "total_len">
+                <h4>글자수</h4>
+                <p></p>
+            </div>
+            <div class= "no_blank_len">
+                <h4>공백 제거 글자수</h4>
+                <p></p>
+            </div>
+            <div class= "word_count">
+                <h4>단어수</>
+                <p></p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
