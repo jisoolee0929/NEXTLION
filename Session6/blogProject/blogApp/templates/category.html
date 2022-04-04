@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'category.css' %}">
+    <title>JS.log</title>
+</head>
+<body>
+    <div class = "header">
+        <a class = "logo" href="{% url 'new'  %}">Js.log 🧑</a>
+        <div class = "category">
+            <a href="{% url 'category' 1  %}">hobby 💖</a>
+            <a href="{% url 'category' 2  %}">food 🍳</a>
+            <a href="{% url 'category' 3  %}">programming 💻</a>
+        </div>
+        <div class = "new">
+            <a href="{% url 'new'  %}">글 쓰러 가기</a>
+            <a href="{% url 'list'  %}">글 리스트</a>
+    </div>
+    <div class = "article">
+        {% for article in articles%}
+            <div class = "text">
+                <a href="{% url 'detail' article.id %}"><h4>✍{{article.title}}</h4></a>
+                <p>{{article.date}} | {{article.content}}</p>
+            </div>
+    
+        {% endfor %}
+    </div>
+</body>
+</html>

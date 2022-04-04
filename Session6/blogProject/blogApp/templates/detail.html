@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <title>JS.log</title>
+</head>
+<body>
+    <div class = "header">
+        <a class = "logo" href="{% url 'new'  %}">Js.log 🧑</a>
+        <div class = "category">
+            <a href="{% url 'category' 1  %}">hobby 💖</a>
+            <a href="{% url 'category' 2  %}">food 🍳</a>
+            <a href="{% url 'category' 3  %}">programming 💻</a>
+        </div>
+        <div class = "new">
+            <a href="{% url 'new'  %}">글 쓰러 가기</a>
+            <a href="{% url 'list'  %}">글 리스트</a>
+        </div>
+    </div>
+    <div class = "detail">
+        <ul>
+            <li>
+                <h2>글의 제목</h2>
+                <p>{{articles.title}}</p>
+            </li>
+            <li>
+                <h2>작성 시간</h2>
+                <p>{{articles.date}}</p>
+            </li>
+            <li>
+                <h2>글의 내용</h2>
+                <p>{{articles.content}}</p>
+            </li>
+        </ul>
+    </div>
+    <a href="{% url 'list'  %}">전체 목록으로 돌아 가기</a>
+    
+</body>
+</html>
