@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'major.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="header">
+        <h1>📚My Subject</h1>
+    </div>
+    <div class = "container">
+        <div class = "add_major">
+            <ul>
+                <li><a class = "add_button" href="{% url  'addSubject'%}">과목 추가</a></li>
+                <li><a class = "add_button" href="{% url 'home' %}">홈으로</a></li>
+            </ul>
+    
+        </div>
+        <div class = "subject">
+            <h2>{{name}}</h2>
+            {% for subject in subjects %}
+               <div class = "subject_box">
+                    <p>{{subject.subject_name}} |{{subject.major}} | {{subject.prof_name}}</p>
+                    <p>{{subject.memo}}</p>
+                    <a class = "edit_button" href="{% url 'editSubject' pk=subject.pk %}">수정</a>
+                    <a class = "del_button" href="{% url 'delete' pk=subject.pk %}">삭제</a>
+                </div>           
+            {% endfor %}
+            
+        </div>
+    </div>
+
+</body>
+</html>

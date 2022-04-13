@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'addSubject.css' %}">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class ="header">
+            <h1>📚My Subject</h1>
+        </div>
+        <div class = "container">
+            <div class = "add_major">
+                <ul>
+                    <li><a class = "add_button" href="{% url  'addMajor'%}">전공 추가</a></li>
+                    <li><a class = "add_button" href="{% url 'home' %}">홈으로</a></li>
+                </ul>
+            </div>
+            <div class = "subject">
+                <h2>전공 추가</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button>등록</button>
+                </form>
+            </div>
+        <div>
+    </body>
+</html>
