@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%  static 'detail.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "header">
+    </div>
+    <div class = "box">
+        <h1>📜ToDoList</h1>
+        <a  class = 'button' href="{% url 'edit' detail_post.pk %}">수정|</a>
+        <a class = 'button' href="{% url 'delete' detail_post.pk %}">삭제|</a>
+        <a  class = 'button' href="{% url 'home' %}">홈으로</a>
+        <div class="container">
+            <div class = "list">
+                <div>
+                    <h2>제목</h2>
+                    <div>{{detail_post.title}}</div>
+                </div>
+                <div>
+                    <h2>내용</h2>
+                    <div>{{detail_post.content}}</div>
+                </div>
+                <div>
+                    <h2>세부 사항</h2>
+                    <div>{{detail_post.detail}}</div>
+                </div>
+                <div>
+                    <h2>마감 기한</h2>
+                    <div>{{detail_post.duedate}}</div>
+                </div>
+                <div>
+                    <h2>d-day</>
+                    <div>{{detail_post.left_day}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

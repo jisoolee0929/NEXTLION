@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%  static 'new.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "header">
+    </div>
+    <div class = "box">
+        <h1>📜ToDoList</h1>
+        <a class = "button" href="{% url 'home' %}">홈으로</a>
+        <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="title">제목</label>
+                    <input type="text" name = "title" id ="title" value="{{edit_post.title}}">
+                </div>
+                <div>
+                    <label for="content">내용</label>
+                    <input type="text" name = "content" id = "content" value="{{edit_post.content}}">
+                </div>
+                <div>
+                    <label for="detail">세부 사항</label>
+                    <input type="text" name = "detail" id = "detail" value="{{edit_post.detail}}">
+                </div>
+                <div>
+                    <label for="duedate">마감 일</label>
+                    <input type="datetime" name = "duedate" id ="duedate"  value="{{edit_post.duedate}}">
+                </div>
+                <div>
+                    <label for="left_day">마감 기한</label>
+                    <input type="number" name = "left_day" id ="left_day" value="{{edit_post.left_day}}">
+                </div>
+                <button type="submit">작성하기</button>
+            </form>
+        </div>
+    </div>    
+    
+</body>
+</html>
