@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+
+    {% endblock css %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <div class="logo">
+            <h2>J-log</h2>
+        </div>
+        <div class="logo">
+            record your life
+        </div>
+        <div class="logo">
+            <a href="{% url 'createpost' %}">새 글 쓰기</a>
+        </div>
+        <div class="logo">
+            <a href="{% url 'list' %}">리스트 보러가기</a>
+        </div>
+    </div>
+    <div class = "container">
+        <div class="firstline">
+            <div class = "post_img">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class = "post_title">
+                <h1>Post List</h1>
+            </div>
+        </div>
+        <div class="post_box">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+    </div>
+    
+</body>
+</html>

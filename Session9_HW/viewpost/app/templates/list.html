@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+    {% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'list.css' %}">
+    {% endblock css %}
+
+
+
+    {% block content %}
+        {% if not posts %}
+        <h3>There is no post</h3>
+        {% endif %}
+
+        {% for post in posts %}
+        <div class="post" >
+            <a href="{% url 'detail' post.pk %}">{{post.pk}}:{{post.title}}</a>
+            <p>조회수: {{post.viewnum}}</p>
+        </div>
+        {% endfor %}
+    {% endblock content %}

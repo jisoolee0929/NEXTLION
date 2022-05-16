@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+    {% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'list.css' %}">
+    {% endblock css %}
+
+    {% block content %}
+    <form method="POST">
+    {% csrf_token %}
+        <div id = "postbox_title">
+            <label for="title">제목</label>
+            <input type="text" name = 'title' id = 'title' value="{{post.title}}" style="width:300px;height:100px;font-size:20px;margin: 10px 10px; border: 0; outline: none; background-color: rgb(233, 233, 233); border-radius: 20px;">
+        </div>
+        <div id="postbox_content">
+            <label for="contnent">내용</label>
+            <input type="text" name = 'content' id = 'content' value="{{post.content}}" style="width:300px;height:100px;font-size:20px;margin: 10px 10px; border: 0; outline: none; background-color: rgb(233, 233, 233); border-radius: 20px;">
+            
+        </div>
+        <br>
+            <button type="submit" style="border: none; padding: 15px 30px; border-radius: 15px;">제출</button>
+    </form>
+    {% endblock content %}
