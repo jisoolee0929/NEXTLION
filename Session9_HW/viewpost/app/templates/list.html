@@ -14,7 +14,7 @@
 
         {% for post in posts %}
         <div class="post" >
-            <a href="{% url 'detail' post.pk %}">{{post.pk}}:{{post.title}}</a>
+            <a  style = "font-size: 30px;" href="{% url 'detail' post.pk %}">{{post.pk}}:{{post.title}}</a>
             <p>조회수: {{post.viewnum}}</p>
         </div>
         {% endfor %}

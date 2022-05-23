@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+    {% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'list.css' %}">
+    {% endblock css %}
+
+    {% block content %}
+        <section id = "login">
+            <form method="POST">
+                {% csrf_token %} {% if error %}
+                <p>{{error}}</p>
+                {% endif %}
+                <input type="text" name="username" placeholder="아이디">
+                <input type="text" name="password" placeholder="비밀번호">
+                <br>
+                <button type="submit">로그인 하기</button>
+            </form>
+
+        </section>
+    {% endblock content %}

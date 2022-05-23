@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     {% load static %}
+    {% load socialaccount %}
+    {% providers_media_js %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +26,30 @@
         <div class="logo">
             <a href="{% url 'list' %}">리스트 보러가기</a>
         </div>
+        {% if user.is_authenticated %}
+        <div class="logo">
+            <a href="{% url 'logout' %}">로그아웃</a>
+        </div>
+        {% else %}
+        <div class = logo>
+            <a href="{% url 'signup' %}">회원가입</a>
+        </div>
+        <div class="logo">
+            <a href="{% url 'login' %}">로그인</a>
+        </div>
+        <!-- <div class="logo"> -->
+            <!-- <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a> -->
+        <!-- </div> -->
+        <form class = "logo" method="POST" action="{% provider_login_url 'kakao' %}">
+            {% csrf_token %} {{form.as_p}} {% if redirect_field_value %}
+            <input type="hidden" name ="{{redirect_field_name}}" value="{{redirect_field_value}}">
+            {% endif %}
+            <button id = "kakao" style = "border: none;padding: 0px; box-shadow: none; font-weight:400; font-size:20px;background-color: white; font-family:'EarlyFontDiary';" class="primaryAction" type="submit">카카오 로그인</button>
+        </form>
+        <div class="logo">
+            <a href="{% provider_login_url 'google' %}">구글 로그인</a>
+        </div>
+        {% endif %}
     </div>
     <div class = "container">
         <div class="firstline">

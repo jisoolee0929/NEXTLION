@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    font-family:'EarlyFontDiary';
+}
+
+.button{
+    font-size: 20px;
+
+}
+
+.post_box{
+    display: inline-block;
+    position: relative;
+    top: 170px;
+    width: 500px;
+    min-height: 400px;
+    border: solid black 1px;
+}
+label{
+    font-size: 35px;
+}
+input{
+    width:300px;
+    height:100px;
+    font-size:30px;
+    margin: 10px 10px; 
+    border: 0; 
+    outline: none; 
+    background-color: 
+    rgb(233, 233, 233); 
+    border-radius: 20px;
+
+}
+
+
+button {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}

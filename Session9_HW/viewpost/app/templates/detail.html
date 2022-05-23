@@ -1,31 +1,38 @@
 {% extends 'base.html' %}
     {% block css %}
     {% load static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
     <link rel="stylesheet" href="{% static 'list.css' %}">
     {% endblock css %}
     
 
     {% block content %}
-        <p>제목<br>{{post.title}}</p>
+        <h3>제목<br>{{post.title}}</h3>
         <br>
-        <p>내용<br>{{post.content}}</p>
+        <h3>내용<br>{{post.content}}</h3>
         <br>
-        <p>조회수<br>{{post.viewnum}}</p>
+        <h3>조회수<br>{{post.viewnum}}</h3>
         <br>
+        {% if user.is_authenticated %}
         <form method="POST">
         {% csrf_token %}
-            <label for="comment">댓글</label>
+            <label style = "font-size: 30px;" for="comment">댓글</label>
             <input type="text" name = 'content' id = 'comment'style="width:200px;height:60px;font-size:20px;margin: 10px 10px; border: 0; outline: none; background-color: rgb(233, 233, 233); border-radius: 20px;">
             <button type="submit" style="border: none; padding: 15px 30px; border-radius: 15px; ">제출</button>
         </form>
+        {% endif %}
         {% for comment in post.comments.all %}
         <li>
             {{comment.content}}
-            <a href="{% url 'deletecomment' post.pk comment.pk %}">댓글 삭제하기</a>
+            <a style = "font-size: 20px;" href="{% url 'deletecomment' post.pk comment.pk %}">댓글 삭제하기</a>
         </li>
         {% endfor %}
 
-        <a href="{% url 'editpost' post.pk %}">수정하기</a>
-        <a href="{% url 'deletepost' post.pk %}">삭제하기</a>
+        {% if user.is_authenticated and post.author.pk == user.pk %}
+        <br>
+        <a class="button" href="{% url 'editpost' post.pk %}" style = "font-size: 20px;" >수정하기</a>
+        <br>
+        <a href="{% url 'deletepost' post.pk %}"style = "font-size: 20px;" >삭제하기</a>
+        {%  endif %}
 
     {% endblock content %}
